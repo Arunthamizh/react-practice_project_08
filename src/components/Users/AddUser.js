@@ -44,8 +44,8 @@ function AddUser(props) {
           value={enteredAge}
           onChange={ageChangeHandler}
         />
-        <button type="submit">Add User</button>
-        {/* <Button type="submit">Add User</Button> */}
+        {/* <button type="submit">Add User</button> */}
+        <Button type="submit">Add User</Button>
       </form>
     </Card>
   );
