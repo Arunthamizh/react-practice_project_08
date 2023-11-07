@@ -4,6 +4,7 @@ import classes from "./AddUser.module.css";
 import Button from "../UI/Button";
 import ErrorModule from "../UI/ErrorModule";
 function AddUser(props) {
+  // ! Notes (useRef)
   // ! useRef always return an object and that object has current property
   // ! Current props holds the current value of the ref
   // ! useRef is recomended to be used only for read a value, we dont want to change the value
@@ -47,8 +48,9 @@ function AddUser(props) {
     props.onAddUser(enteredName, enteredUserAge);
     // setEnteredUsername("");
     // setEnteredAge("");
-
-    // ! below is not recommended
+    // ! notes (useRef)
+    // ! below is not recommended because it will not controled by react(uncontrolled)
+    // ! because we are using native DOM elements to change the value
     nameInputRef.current.value = "";
     ageInputRef.current.value = "";
   };
