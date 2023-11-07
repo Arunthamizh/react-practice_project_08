@@ -14,10 +14,13 @@ function App() {
     });
   };
   return (
-    <div>
+    // ! we can use react fragments(<> or <React.Fragment>) to wrap multiple elements
+    // ! Because react not allowed to wrap multiple elements in one element
+    // <React.Fragment></React.Fragment>
+    <>
       <AddUser onAddUser={addUserHandler} />
       <UserList users={userList} />
-    </div>
+    </>
   );
 }
 
